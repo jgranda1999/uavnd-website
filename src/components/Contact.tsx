@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Clock, Send } from 'lucide-react';
-import contactVideo from "../videos/chase - Made with Clipchamp (1).mp4";
+import contactVideo from "../videos/chase.mp4";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
