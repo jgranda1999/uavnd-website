@@ -1,46 +1,128 @@
-# Getting Started with Create React App
+# UAV ND Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for the University of Notre Dame's Unmanned Aerial Vehicle (UAV) Club. Built with React, TypeScript, and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🚁 **Modern Design**: Blends the academic aesthetic of IrishSat with the sleek tech style of Anduril
+- 📱 **Fully Responsive**: Optimized for all device sizes
+- ⚡ **Fast Performance**: Built with React and optimized for speed
+- 🎨 **Beautiful UI**: Custom animations and smooth transitions
+- 🔧 **TypeScript**: Full type safety and better development experience
 
-### `npm start`
+## Sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Hero**: Eye-catching landing section with mission statement (video background)
+- **Projects**: Showcase of current UAV projects and initiatives
+- **About**: Club history and mission
+- **Team**: Leadership team and member information (with photos)
+- **Sponsors**: Current partners and sponsorship levels
+- **Outcomes**: Where our alumni work (simplified company tiles with logos)
+- **Contact**: Contact form and club information (video background)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v20 or higher recommended)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd uav-nd-website
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If port 3000 is in use, you can choose another port (e.g., 3001):
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+PORT=3001 npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Building for Production
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+This builds the app for production to the `build` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React 19** - Frontend framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling and responsive design
+- **Lucide React** - Beautiful icons
+- **Framer Motion** - Animations (ready to use)
+
+## Design Philosophy
+
+The website combines:
+
+- **IrishSat's Academic Style**: Clean, professional design with Notre Dame branding
+- **Anduril's Tech Aesthetic**: Modern dark theme with high contrast and sleek typography
+
+## Customization
+
+### Colors
+
+The website uses a custom color palette defined in `tailwind.config.js`:
+
+- `nd-gold`: Notre Dame gold (#D4AF37)
+- `nd-blue`: Notre Dame blue (#0C2340)
+- `nd-navy`: Notre Dame navy (#1B365D)
+- `dark-bg`: Dark background (#0A0A0A)
+- `dark-surface`: Dark surface (#1A1A1A)
+
+### Content
+
+Update the content in each component file:
+- `src/components/Hero.tsx` - Hero section content and background video
+- `src/components/Projects.tsx` - Project information
+- `src/components/About.tsx` - About section content
+- `src/components/Team.tsx` - Team member information and photos
+- `src/components/Sponsors.tsx` - Sponsors content
+- `src/components/Outcomes.tsx` - Alumni companies (logos, colored tiles)
+- `src/components/Contact.tsx` - Contact information and background video
+
+### Media Assets
+
+- Place images in `src/img/` and import them directly in components.
+- Place videos in `src/videos/` and import `.mp4` files directly; TypeScript module declarations are included in `src/types/media.d.ts`.
+- Large videos may impact performance; consider compressing or trimming for production.
+
+### SVG Notes
+
+- Some SVGs with XML namespaces (e.g., `xmlns:bx`) may fail to compile in CRA by default. If an SVG fails, either sanitize it (remove non-standard namespaces/attributes) or convert it to PNG.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions about this website or the UAV ND club, contact:
+- Email: uav.nd@nd.edu
+- Location: Fitzpatrick Hall of Engineering, University of Notre Dame
