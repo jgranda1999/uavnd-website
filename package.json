@@ -1,5 +1,6 @@
 {
   "name": "uav-nd-website",
+  "homepage": "https://jgranda1999.github.io/uavnd-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

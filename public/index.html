@@ -4,6 +4,19 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Preserve SPA route across 404 refreshes on GitHub Pages
+      (function() {
+        var path = window.location.pathname;
+        var repo = '/uavnd-website';
+        if (path.startsWith(repo + '/')) {
+          var newUrl = path.replace(repo, '');
+          if (newUrl && newUrl !== '/') {
+            sessionStorage.setItem('gh_redirect', newUrl + window.location.search + window.location.hash);
+          }
+        }
+      })();
+    </script>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
