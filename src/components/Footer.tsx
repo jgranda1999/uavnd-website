@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/uav_nd/' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/uavnd_?igsh=MXVicmVyZDV3cTJvcQ==' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/unmanned-aerial-vehicles-of-notre-dame-0655ba388' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/UAVND' },
   ];
