@@ -97,14 +97,14 @@ const About: React.FC = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-display font-bold text-white text-center mb-12">Our Journey</h3>
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-nd-gold to-nd-blue"></div>
+            {/* Timeline Line - Hidden on mobile */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-nd-gold to-nd-blue"></div>
             
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="card max-w-md">
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} md:flex-row md:${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}`}>
+                    <div className="card max-w-md mx-auto md:mx-0">
                       <div className="flex items-center mb-3">
                         <Calendar className="w-5 h-5 text-nd-gold mr-2" />
                         <span className="text-nd-gold font-semibold">{item.year}</span>
@@ -114,10 +114,10 @@ const About: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Timeline Dot */}
-                  <div className="relative z-10 w-4 h-4 bg-nd-gold rounded-full border-4 border-dark-bg"></div>
+                  {/* Timeline Dot - Hidden on mobile */}
+                  <div className="hidden md:block relative z-10 w-4 h-4 bg-nd-gold rounded-full border-4 border-dark-bg"></div>
                   
-                  <div className="w-1/2"></div>
+                  <div className="hidden md:block w-1/2"></div>
                 </div>
               ))}
             </div>

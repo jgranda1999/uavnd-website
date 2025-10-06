@@ -139,7 +139,7 @@ const Team: React.FC = () => {
 				{/* Leadership Team */}
 				<div className="mb-16">
 					<h3 className="text-3xl font-display font-bold text-white text-center mb-12">Leadership Team</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 						{leadership.map((member, index) => (
 							<div key={index} className="card text-center group hover:shadow-2xl hover:shadow-nd-gold/10 transition-all duration-500">
 								{/* Profile Image */}

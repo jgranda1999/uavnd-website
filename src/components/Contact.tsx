@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <div className="card">
             <h3 className="text-2xl font-display font-bold text-white mb-6">Send us a Message</h3>
