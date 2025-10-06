@@ -29,31 +29,33 @@ const Contact: React.FC = () => {
     try {
       // EmailJS configuration
       const serviceId = 'service_lte9vqm';
-      const templateId = 'template_i0do3ts';
       const publicKey = 'xr77qJGEOIsB7CFEN';
 
       const templateParams = {
         name: formData.name,
         title: formData.subject,
         message: formData.message,
-        from_email: formData.email,
-        to_email: 'uavnd@nd.edu'
+        email: formData.email
       };
 
-      console.log('Sending email with params:', templateParams);
-      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      console.log('EmailJS result:', result);
+      console.log('Sending emails with params:', templateParams);
+      
+      // Send auto-reply to user
+      const autoReplyResult = await emailjs.send(serviceId, 'template_i0do3ts', templateParams, publicKey);
+      console.log('Auto-reply result:', autoReplyResult);
+      
+      // Send notification to uavnd@nd.edu
+      const forwardResult = await emailjs.send(serviceId, 'template_lfw1aqz', templateParams, publicKey);
+      console.log('Forward result:', forwardResult);
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('EmailJS error:', error);
+      console.error('Error status:', error?.status);
+      console.error('Error text:', error?.text);
+      console.error('Full error object:', JSON.stringify(error, null, 2));
       setSubmitStatus('error');
-      // Log more details about the error
-      if (error instanceof Error) {
-        console.error('Error message:', error.message);
-        console.error('Error details:', error);
-      }
     } finally {
       setIsSubmitting(false);
     }
