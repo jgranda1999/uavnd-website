@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Stinson-Remick Hall of Engineering - 213",
+      details: "Stinson-Remick Hall of Engineering - 216",
       description: "University of Notre Dame"
     },
     {

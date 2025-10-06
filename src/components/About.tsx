@@ -133,7 +133,7 @@ const About: React.FC = () => {
                 <MapPin className="w-6 h-6 text-nd-gold mt-1" />
                 <div>
                   <p className="text-white font-semibold">University of Notre Dame</p>
-                  <p className="text-gray-300">Stinson-Remick Hall of Engineering - 213
+                  <p className="text-gray-300">Stinson-Remick Hall of Engineering - 216
                   </p>
                   <p className="text-gray-300">Notre Dame, IN 46556</p>
                 </div>
