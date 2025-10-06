@@ -24,6 +24,18 @@ const Contact: React.FC = () => {
         playPromise.catch(() => {
           // Autoplay failed, which is common on mobile
           console.log('Contact video autoplay failed, will play on user interaction');
+          
+          // Add click/touch listeners to play video on user interaction
+          const playOnInteraction = () => {
+            video.play().catch(console.log);
+            document.removeEventListener('click', playOnInteraction);
+            document.removeEventListener('touchstart', playOnInteraction);
+            document.removeEventListener('scroll', playOnInteraction);
+          };
+          
+          document.addEventListener('click', playOnInteraction);
+          document.addEventListener('touchstart', playOnInteraction);
+          document.addEventListener('scroll', playOnInteraction);
         });
       }
     }
