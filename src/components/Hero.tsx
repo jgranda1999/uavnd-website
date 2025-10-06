@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import heroVideo from '../videos/DJI_0009.MP4';
 
 const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay failed, which is common on mobile
+          console.log('Video autoplay failed, will play on user interaction');
+        });
+      }
+    }
+  }, []);
+
   return (
     <section id="home" className="relative overflow-hidden bg-dark-bg min-h-[70vh]">
       {/* Background video */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover opacity-50"
           src={heroVideo}
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
+          webkit-playsinline="true"
         >
           {/* Fallback for older browsers */}
         </video>

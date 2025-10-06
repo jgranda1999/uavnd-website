@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Documentation', href: '#documentation' },
     { name: 'About', href: '#about' },
     { name: 'Team', href: '#team' },
     { name: 'Sponsors', href: '#sponsors' },

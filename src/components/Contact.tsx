@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import contactVideo from "../videos/chase.mp4";
@@ -12,6 +12,22 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay failed, which is common on mobile
+          console.log('Contact video autoplay failed, will play on user interaction');
+        });
+      }
+    }
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -88,12 +104,15 @@ const Contact: React.FC = () => {
       {/* Background video */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover opacity-25"
           src={contactVideo}
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
+          webkit-playsinline="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
       </div>

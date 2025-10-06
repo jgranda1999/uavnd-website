@@ -102,7 +102,7 @@ const About: React.FC = () => {
             
             <div className="space-y-8 md:space-y-12">
               {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} md:flex-row md:${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}`}>
                     <div className="card max-w-md mx-auto md:mx-0">
                       <div className="flex items-center mb-3">
