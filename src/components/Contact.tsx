@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import contactVideo from "../videos/chase.mp4";
 
 const Contact: React.FC = () => {
@@ -9,6 +10,8 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -18,12 +21,35 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_lte9vqm';
+      const templateId = 'template_i0do3ts';
+      const publicKey = 'xr77qJGEOIsB7CFEN';
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'uavnd@nd.edu'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -153,11 +179,27 @@ const Contact: React.FC = () => {
                 />
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="flex items-center space-x-2 text-green-400 bg-green-400/10 border border-green-400/20 rounded-lg p-3">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Message sent successfully! We'll get back to you soon.</span>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
+                  <AlertCircle className="w-5 h-5" />
+                  <span>Failed to send message. Please try again or email us directly at uavnd@nd.edu</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="btn-primary w-full inline-flex items-center justify-center group"
+                disabled={isSubmitting}
+                className="btn-primary w-full inline-flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
