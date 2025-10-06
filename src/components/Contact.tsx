@@ -33,20 +33,27 @@ const Contact: React.FC = () => {
       const publicKey = 'xr77qJGEOIsB7CFEN';
 
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
+        name: formData.name,
+        title: formData.subject,
         message: formData.message,
+        from_email: formData.email,
         to_email: 'uavnd@nd.edu'
       };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('Sending email with params:', templateParams);
+      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('EmailJS result:', result);
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('EmailJS error:', error);
       setSubmitStatus('error');
+      // Log more details about the error
+      if (error instanceof Error) {
+        console.error('Error message:', error.message);
+        console.error('Error details:', error);
+      }
     } finally {
       setIsSubmitting(false);
     }
