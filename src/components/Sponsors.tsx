@@ -81,7 +81,7 @@ const Sponsors: React.FC = () => {
             Partnering for Innovation
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We're grateful for the support of industry leaders who share our vision of advancing UAV technology and developing the next generation of aerospace engineers.
+            We're grateful for the support of industry leaders who share our vision of advancing UAV technology and developing the next generation of engineers.
           </p>
         </div>
 

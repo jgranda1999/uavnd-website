@@ -19,8 +19,8 @@ const Team: React.FC = () => {
 			location: "Sarasota, FL",
 			image: fabianImage,
 			bio: "Leading UAV ND with a passion for mechanical systems and financial management, driving our club's mission forward.",
-			linkedin: "#",
-			email: "fortega@nd.edu"
+			linkedin: "https://www.linkedin.com/in/fabian-ortega05/",
+			email: "fortega2@nd.edu"
 		},
 		{
 			name: "Minjae Kim",
@@ -30,8 +30,8 @@ const Team: React.FC = () => {
 			location: "Tamuning, GU",
 			image: minjaeImage,
 			bio: "Expert in electrical systems and circuit design, supporting our technical projects and club operations.",
-			linkedin: "#",
-			email: "mkim@nd.edu"
+			linkedin: "https://www.linkedin.com/in/mjkim05/",
+			email: "mkim26@nd.edu"
 		},
 		{
 			name: "Winston Tumbelaka",
@@ -41,8 +41,8 @@ const Team: React.FC = () => {
 			location: "Jakarta, IDN",
 			image: winstonImage,
 			bio: "Ensuring the safety of all our operations while contributing to electrical engineering projects.",
-			linkedin: "#",
-			email: "wtumbelaka@nd.edu"
+			linkedin: "https://www.linkedin.com/in/winston-tumbelaka/",
+			email: "wtumbel2@nd.edu"
 		},
 		{
 			name: "Jonathan Granda",
@@ -52,8 +52,8 @@ const Team: React.FC = () => {
 			location: "Morristown, NJ",
 			image: jgImage,
 			bio: "Providing technical guidance and expertise in software development and international collaboration.",
-			linkedin: "#",
-			email: "jgranda@nd.edu"
+			linkedin: "https://www.linkedin.com/in/jonathan-granda-acaro/",
+			email: "jgrandaa@nd.edu"
 		}
 	];
 	// Additional leaders
@@ -66,8 +66,8 @@ const Team: React.FC = () => {
 			location: "Ashburn, Virginia",
 			image: chrisImage,
 			bio: "Strengthening our corporate partnerships and fostering new sponsorship opportunities.",
-			linkedin: "#",
-			email: "uavnd@nd.edu"
+			linkedin: "https://www.linkedin.com/in/christopher-w-qian/",
+			email: "cqian3@nd.edu"
 		},
 		{
 			name: "Colin Ryan",
@@ -77,19 +77,19 @@ const Team: React.FC = () => {
 			location: "Wheeling, IL",
 			image: colinImage,
 			bio: "Building industry relationships and supporting sponsorship and partnership initiatives.",
-			linkedin: "#",
-			email: "uavnd@nd.edu"
+			linkedin: "https://www.linkedin.com/in/colin-ryan18/",
+			email: "cryan32@nd.edu"
 		},
 		{
 			name: "Enoch Hyo-Gun Lee",
-			role: "Project Manager",
+			role: "Communications Officer",
 			major: "Electrical Engineering",
 			year: "",
 			location: "Gyeonggi-do, South Korea",
 			image: enochImage,
-			bio: "Coordinating club communications and outreach across campus and online platforms.",
-			linkedin: "#",
-			email: "uavnd@nd.edu"
+			bio: "Managing team projects and coordinating club communications and outreach across campus and online platforms.",
+			linkedin: "https://www.linkedin.com/in/enoch-hyo-gun-lee/",
+			email: "elee26@nd.edu"
 		},
 		{
 			name: "Jake Kalman",
@@ -99,8 +99,8 @@ const Team: React.FC = () => {
 			location: "Charlotte, NC",
 			image: jakeImage,
 			bio: "Showcasing our projects and team culture through engaging social media content.",
-			linkedin: "#",
-			email: "uavnd@nd.edu"
+			linkedin: "https://www.linkedin.com/in/jakekalman0073/",
+			email: "jkalman@nd.edu"
 		}
 	);
 
