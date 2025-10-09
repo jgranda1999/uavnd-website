@@ -7,7 +7,7 @@ const Sponsors: React.FC = () => {
     {
       name: "Boeing",
       logo: boeingImage,
-      description: "Leading aerospace manufacturer supporting our mission to develop the next generation of aerospace engineers.",
+      description: "Leading aerospace manufacturer supporting our mission to develop the next generation of UAV engineers.",
       level: "Platinum",
       website: "https://www.boeing.com",
       support: "Funding and mentorship"
@@ -119,7 +119,7 @@ const Sponsors: React.FC = () => {
         <div className="bg-gradient-to-r from-nd-blue to-nd-navy rounded-2xl p-8 border border-dark-border text-center">
           <h3 className="text-3xl font-display font-bold text-white mb-4">Become a Sponsor</h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join industry leaders like Boeing in supporting the next generation of aerospace engineers. 
+            Join industry leaders like Boeing in supporting the next generation of UAV engineers. 
             Your partnership helps us continue our mission of innovation and education.
           </p>
           

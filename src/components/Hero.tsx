@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             Building the Future of Unmanned Flight
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-10">
-            Student-led research and development club in autonomous systems, aerial robotics, and real-world UAV applications.
+            Undergraduate-led research and development club in autonomous systems, aerial robotics, and real-world UAV applications.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#projects" className="btn-primary">Explore Projects</a>
