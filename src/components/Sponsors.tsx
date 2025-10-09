@@ -14,36 +14,6 @@ const Sponsors: React.FC = () => {
     }
   ];
 
-  const sponsorLevels = [
-    {
-      level: "Platinum",
-      color: "text-gray-300",
-      bgColor: "bg-gray-800",
-      borderColor: "border-gray-600",
-      benefits: ["Logo placement on website", "Speaking opportunities", "Equipment sponsorship", "Mentorship programs", "Internship priority"]
-    },
-    {
-      level: "Gold",
-      color: "text-yellow-400",
-      bgColor: "bg-yellow-900/20",
-      borderColor: "border-yellow-600",
-      benefits: ["Logo placement", "Equipment sponsorship", "Mentorship programs"]
-    },
-    {
-      level: "Silver",
-      color: "text-gray-400",
-      bgColor: "bg-gray-800/50",
-      borderColor: "border-gray-500",
-      benefits: ["Logo placement", "Equipment sponsorship"]
-    },
-    {
-      level: "Bronze",
-      color: "text-orange-400",
-      bgColor: "bg-orange-900/20",
-      borderColor: "border-orange-600",
-      benefits: ["Logo placement"]
-    }
-  ];
 
   const partnershipBenefits = [
     {
@@ -107,9 +77,6 @@ const Sponsors: React.FC = () => {
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                       <h4 className="text-2xl font-display font-bold text-white">{sponsor.name}</h4>
-                      <span className="px-3 py-1 bg-nd-gold/20 text-nd-gold border border-nd-gold/30 rounded-full text-sm font-medium">
-                        {sponsor.level} Sponsor
-                      </span>
                     </div>
                     <p className="text-gray-300 mb-4 leading-relaxed">{sponsor.description}</p>
                     <p className="text-nd-gold font-medium mb-4">Support Provided: {sponsor.support}</p>
@@ -148,27 +115,6 @@ const Sponsors: React.FC = () => {
           </div>
         </div>
 
-        {/* Sponsor Levels */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-display font-bold text-white text-center mb-12">Sponsorship Levels</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sponsorLevels.map((level, index) => (
-              <div key={index} className={`card border-2 ${level.borderColor} ${level.bgColor}`}>
-                <div className="text-center">
-                  <h4 className={`text-2xl font-bold ${level.color} mb-4`}>{level.level}</h4>
-                  <ul className="space-y-2 text-left">
-                    {level.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        <Star className="w-4 h-4 text-nd-gold mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-nd-blue to-nd-navy rounded-2xl p-8 border border-dark-border text-center">
