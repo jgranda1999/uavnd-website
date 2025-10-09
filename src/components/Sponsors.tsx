@@ -79,7 +79,6 @@ const Sponsors: React.FC = () => {
                       <h4 className="text-2xl font-display font-bold text-white">{sponsor.name}</h4>
                     </div>
                     <p className="text-gray-300 mb-4 leading-relaxed">{sponsor.description}</p>
-                    <p className="text-nd-gold font-medium mb-4">Support Provided: {sponsor.support}</p>
                     <a
                       href={sponsor.website}
                       target="_blank"
