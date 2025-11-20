@@ -6,7 +6,6 @@ import winstonImage from '../img/winston.jpeg';
 import minjaeImage from '../img/minjae.png';
 import enochImage from '../img/enoch.jpeg';
 import chrisImage from '../img/chris.jpg';
-import colinImage from '../img/colin.jpeg';
 import jakeImage from '../img/jake.jpg';
 
 const Team: React.FC = () => {
@@ -29,10 +28,21 @@ const Team: React.FC = () => {
 			year: "Junior",
 			location: "Tamuning, GU",
 			image: minjaeImage,
-			bio: "Expert in electrical systems and circuit design, supporting our technical projects and club operations.",
+			bio: "Leading the electrical systems team and supporting our technical projects and club operations.",
 			linkedin: "https://www.linkedin.com/in/mjkim05/",
 			email: "mkim26@nd.edu"
 		},
+		{
+			name: "Jonathan Granda",
+			role: "Vice-President",
+			major: "Computer Science & Spanish, Portuguese & Brazilian Studies",
+			year: "Senior",
+			location: "Morristown, NJ",
+			image: jgImage,
+			bio: "Leading the software systems team and providing technical guidance and expertise in software development and international collaboration.",
+			linkedin: "https://www.linkedin.com/in/jonathan-granda-acaro/",
+			email: "jgrandaa@nd.edu"
+		}, 
 		{
 			name: "Winston Tumbelaka",
 			role: "Chief Safety Officer",
@@ -43,17 +53,6 @@ const Team: React.FC = () => {
 			bio: "Ensuring the safety of all our operations while contributing to electrical engineering projects.",
 			linkedin: "https://www.linkedin.com/in/winston-tumbelaka/",
 			email: "wtumbel2@nd.edu"
-		},
-		{
-			name: "Jonathan Granda",
-			role: "Senior Technical Advisor",
-			major: "Computer Science & Spanish, Portuguese",
-			year: "Senior",
-			location: "Morristown, NJ",
-			image: jgImage,
-			bio: "Providing technical guidance and expertise in software development and international collaboration.",
-			linkedin: "https://www.linkedin.com/in/jonathan-granda-acaro/",
-			email: "jgrandaa@nd.edu"
 		}
 	];
 	// Additional leaders
@@ -68,17 +67,6 @@ const Team: React.FC = () => {
 			bio: "Strengthening our corporate partnerships and fostering new sponsorship opportunities.",
 			linkedin: "https://www.linkedin.com/in/christopher-w-qian/",
 			email: "cqian3@nd.edu"
-		},
-		{
-			name: "Colin Ryan",
-			role: "Corporate Relations Officer",
-			major: "Computer Engineering + ACMS",
-			year: "Sophomore",
-			location: "Wheeling, IL",
-			image: colinImage,
-			bio: "Building industry relationships and supporting sponsorship and partnership initiatives.",
-			linkedin: "https://www.linkedin.com/in/colin-ryan18/",
-			email: "cryan32@nd.edu"
 		},
 		{
 			name: "Enoch Hyo-Gun Lee",
