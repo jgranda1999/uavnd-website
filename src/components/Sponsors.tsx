@@ -1,18 +1,7 @@
 import React from 'react';
-import { Award, Building2, Handshake, Star, Users, Briefcase } from 'lucide-react';
-import boeingImage from '../img/boeing.jpg';
+import { Award, Building2, Handshake, Users, Briefcase } from 'lucide-react';
 
 const Sponsors: React.FC = () => {
-  const sponsors = [
-    {
-      name: "Boeing",
-      logo: boeingImage,
-      description: "Leading aerospace manufacturer supporting our mission to develop the next generation of UAV engineers.",
-      level: "Platinum",
-      website: "https://www.boeing.com",
-      support: "Funding and mentorship"
-    }
-  ];
 
 
   const partnershipBenefits = [
@@ -51,48 +40,8 @@ const Sponsors: React.FC = () => {
             Partnering for Innovation
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We're grateful for the support of industry leaders who share our vision of advancing UAV technology and developing the next generation of engineers.
+            We're looking for industry partners who share our vision of advancing UAV technology and developing the next generation of engineers.
           </p>
-        </div>
-
-        {/* Current Sponsors */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-display font-bold text-white text-center mb-12">Current Sponsors</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-            {sponsors.map((sponsor, index) => (
-              <div key={index} className="card max-w-4xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  {/* Sponsor Logo */}
-                  <div className="flex-shrink-0">
-                    <div className="w-48 h-24 bg-white rounded-lg flex items-center justify-center p-4">
-                      <img 
-                        src={sponsor.logo} 
-                        alt={`${sponsor.name} Logo`} 
-                        className="max-w-full max-h-full object-contain"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Sponsor Info */}
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                      <h4 className="text-2xl font-display font-bold text-white">{sponsor.name}</h4>
-                    </div>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{sponsor.description}</p>
-                    <a
-                      href={sponsor.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary inline-flex items-center"
-                    >
-                      Visit Website
-                      <Star className="ml-2 w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Partnership Benefits */}
@@ -119,7 +68,7 @@ const Sponsors: React.FC = () => {
         <div className="bg-gradient-to-r from-nd-blue to-nd-navy rounded-2xl p-8 border border-dark-border text-center">
           <h3 className="text-3xl font-display font-bold text-white mb-4">Become a Sponsor</h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join industry leaders like Boeing in supporting the next generation of UAV engineers. 
+            Support the next generation of UAV engineers. 
             Your partnership helps us continue our mission of innovation and education.
           </p>
           
